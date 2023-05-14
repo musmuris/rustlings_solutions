@@ -32,6 +32,11 @@ fn updateMap(
     goals_scored:u8,
     goals_conceded:u8 ) {
 
+
+    // This was mine after googling.
+    // I've since found 
+    // https://github.com/akhildevelops/rustlings-solutions/blob/solutions/exercises/hashmaps/hashmaps3.rs
+    // which I prefer (but didn't even know about `if let` at this point!)
     let entry = scores.entry(name.clone())
         .and_modify(|x| {
                 x.goals_scored += goals_scored;
