@@ -11,10 +11,17 @@
 // you can do this!
 // Execute `rustlings hint traits2` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+// I AM NOT DON
 
 trait AppendBar {
     fn append_bar(self) -> Self;
+}
+
+impl AppendBar for Vec<String> {
+    fn append_bar(mut self) -> Self {
+        self.push("Bar".into());
+        self
+    }
 }
 
 // TODO: Implement trait `AppendBar` for a vector of strings.
